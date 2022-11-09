@@ -1,0 +1,184 @@
+body{
+    background-color: #ffffff4f;
+}
+/* FONT */
+@font-face{
+    src: url(../font/caslonbold.otf);
+    font-family: 'caslon';
+}
+
+@font-face{
+    src: url(../font/OpenSansRegular.ttf);
+    font-family: 'opensans';
+}
+/* KONTEN ATAS */
+.kotak{
+    width: 90%;
+    height: 400px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    /* box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.253); */
+    border: none;
+    border-radius: 3px;
+    color: black;
+    /*background: linear-gradient(to top,#0BB1BF,#26DCEA);*/
+    background-color: #fff;
+     box-shadow: 0 0.9px 3.2px rgba(0, 0, 0, 0.001),
+    0 2.1px 7.1px rgba(0, 0, 0, 0.002), 0 3.5px 12.1px rgba(0, 0, 0, 0.004),
+    0 5.4px 18.7px rgba(0, 0, 0, 0.006), 0 8.1px 27.7px rgba(0, 0, 0, 0.01),
+    0 11.8px 40.7px rgba(0, 0, 0, 0.014), 0 17.7px 60.9px rgba(0, 0, 0, 0.02),
+    0 28.3px 97.1px rgba(0, 0, 0, 0.033), 0 53px 182px rgba(0, 0, 0, 0.07);
+    font-family: 'roboto-black';
+    border-radius: 10px;
+}
+.tulisan h3{
+    font-size: 35px;
+    font-family: 'opensans';
+}
+.tulisan p{
+    font-size: 14px;
+    font-family: 'opensans';
+}
+/* LOGO VIRUS DAN ANIMASI */
+.kotak_logo{
+    display: flex;
+    margin: 0 auto;
+    width: 450px;
+    height: 150px;
+    position: relative;
+}
+.logo_konten_kiri{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(../img/corona.png);
+    background-size: cover;
+    animation:kiri 10s linear infinite;
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+}
+.logo_konten_tengah{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url(../img/corona.png);
+    background-size: cover;
+    animation:kotak_besar 25s linear infinite;
+    position: absolute;
+    top:0;
+    left: 30%;
+}
+.logo_konten_kanan{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(../img/corona.png);
+    background-size: cover;
+    position: absolute;
+    left: 63%;
+    top: 20px;
+    bottom: 0;
+    animation:kanan 10s linear infinite;
+}
+/* TULISAN */
+.tulisan{
+    width: 50%;
+    margin:0 auto;
+    text-align: center;
+}
+.tulisan p{
+    font-family: 'roboto-medium';
+    color: black;
+}
+/* KOTAK KECIL */
+.kotak_kecil{
+    width: 50%;
+    padding: 15px;
+    border-radius: 20px;/*
+    background: linear-gradient(to top,#0BB1BF,#26DCEA);*/
+    background-color: white;
+    justify-content: space-around;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    bottom: 0;
+    margin-bottom: -50px;
+    display: flex;/*
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.383);*/
+    /*color:#214151;*/
+    color: black;
+    box-shadow: 0 0.9px 3.2px rgba(0, 0, 0, 0.001),
+    0 2.1px 7.1px rgba(0, 0, 0, 0.002), 0 3.5px 12.1px rgba(0, 0, 0, 0.004),
+    0 5.4px 18.7px rgba(0, 0, 0, 0.006), 0 8.1px 27.7px rgba(0, 0, 0, 0.01),
+    0 11.8px 40.7px rgba(0, 0, 0, 0.014), 0 17.7px 60.9px rgba(0, 0, 0, 0.02),
+    0 28.3px 97.1px rgba(0, 0, 0, 0.033), 0 53px 182px rgba(0, 0, 0, 0.07);
+}
+.status{
+    color: black;
+}
+
+.kotak_kecil .angka{
+    font-size: 20px;
+}
+.kotak_kecil .status{
+    font-size: 15px;
+    font-family: 'roboto-medium';
+}
+.kiri,.tengah,.kanan{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    justify-content: space-between;
+    text-align: center;
+}
+/* ANIMASI */
+@keyframes kotak_besar{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes kanan{
+    0%{
+        transform: scale(0.2);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(0.2);
+    }
+}
+@keyframes kiri{
+    0%{
+        transform: scale(1.2);
+    }
+    50%{
+        transform: scale(0.2);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+@media(max-width: 600px){
+    .kotak{
+        height: 500px;
+        margin-bottom:100px;
+        padding-bottom: 40px;
+    }
+    .kotak_kecil{
+        width: 90%;
+        height: 80px;
+        padding: 0px;
+    }
+
+    .tulisan h3{
+        font-size: 28px;
+    }
+    .tulisan p{
+        font-size: 14px;
+
+    }
+}

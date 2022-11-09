@@ -1,0 +1,3 @@
+-Buka XAMPP
+-START APACHE
+-Buka url di broser => http://localhost/fightcovid/
